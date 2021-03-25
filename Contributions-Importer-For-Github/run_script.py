@@ -1,8 +1,9 @@
-value = True; 
+value = True;
 
 # Contributions-Importer-For-Github/run_script.py
+import sys
+sys.path.append ("/usr/local/lib/python3.9/site-packages")
 import git 
-
 from git_contributions_importer import *
  
 # Your private repo or Bitbucket repo
@@ -21,4 +22,3 @@ importer = Importer([repo, repoTwo, repoThree], mock_repo)
 importer.set_author(['ariana@sole360.com','arianadavis62@gmail.com','adavis@warriors.com','hello@yourmobilegeek.tech'])
 importer.set_start_from_last(value)
 importer.import_repository()
-
